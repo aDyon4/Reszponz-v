@@ -8,6 +8,15 @@
     <title>Motorok</title>
 </head>
 <body>
+    <header>
+        <a href="#" id="ham" onclick="menu()">&#9776;</a>
+        <div id="menu" class="" >
+            <a href="#" class="selected">Kezdőlap</a>
+            <a href="#">Verseny</a>
+            <a href="#">Zöld</a>
+            <a href="#">Képek</a>
+        </div>
+    </header>
     
     <div class="nagy">
        <div class="kicsik">
@@ -17,7 +26,7 @@
                 <p><b>Aleix Espargaro visszavonul:</b><i>„A szezon végén visszavonulok teljes állású versenyzőként”</i> – fogalmazott a háromszoros nagydíjgyőztes, aki a spanyol nyelvű, jóval hosszabb nyilatkozata közben már a könnyeivel küszködött Barcelonában, miközben a családjának is köszönetet mondott.</p>
             </div>
             <div class="hir">
-                <img src="img/verseny2.jpg" title="Farkas Kevin ">
+                <img src="img/verseny2.jpg" title="Farkas Kevin">
                 <p><b>Farkas Kevin megtörte a jeget:</b> megszerezte első pontjait a 2024-es szezonban. Kevin Le Mans-ban, a Red Bull Rookies Cup-sorozat második versenyhétvégéjén állt rajthoz, ahol ezúttal semmi nem akadályozta.</p>
             </div>
         </div>
@@ -57,3 +66,20 @@
 
 </body>
 </html>
+
+
+<script>
+
+    function menu(){
+        let m = document.getElementById("menu");
+        if( m.className == "" ) m.className = "show";
+        else m.className = "";
+    }
+
+    function updateHeading(){
+        let htmlWidth = document.documentElement.clientWidth;
+        document.title = 'Motorok (' + htmlWidth + 'px)';
+    }
+    window.addEventListener('load', updateHeading);
+    window.addEventListener('resize', updateHeading);
+</script>
