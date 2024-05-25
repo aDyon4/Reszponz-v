@@ -73,7 +73,7 @@ span { font-size: 15px; }
     header #menu.show a { 
         display: block; 
         padding: 5px 30px;
-        background-color: rgb(105, 196, 249); 
+        background-color: rgb(10, 72, 43);
     }
     header #menu.show a:hover { 
         border: 1px solid black
