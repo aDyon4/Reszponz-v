@@ -12,14 +12,14 @@
         <a href="#" id="ham" onclick="menu()">&#9776;</a>
         <div id="menu" class="" >
             <a href="#" class="selected">Kezdőlap</a>
-            <a href="#">Verseny</a>
-            <a href="#">Zöld</a>
-            <a href="#">Képek</a>
+            <a href="#" onclick="katt('ver')">Verseny</a>
+            <a href="#" onclick="katt('zol')">Zöldek</a>
+            <a href="#" onclick="katt('kep')">Képek</a>
         </div>
     </header>
     
     <div class="nagy">
-       <div class="kicsik">
+       <div class="kicsik" id="versenyId">
             <h2>Verseny</h2>
             <div class="hir">
                 <img src="img/verseny1.jpg" title="Aleix Espargaro">
@@ -30,7 +30,7 @@
                 <p><b>Farkas Kevin megtörte a jeget:</b> megszerezte első pontjait a 2024-es szezonban. Kevin Le Mans-ban, a Red Bull Rookies Cup-sorozat második versenyhétvégéjén állt rajthoz, ahol ezúttal semmi nem akadályozta.</p>
             </div>
         </div>
-       <div class="kicsik">
+       <div class="kicsik" id="zoldId">
             <h2>"Zöld" motorok</h2>
             <div class="hir">
                 <img src="img/ninja-hybrid.jpg" title="Ninja7-Hybrid">
@@ -42,21 +42,21 @@
             </div>
           
        </div>
-       <div class="kicsik">
+       <div class="kicsik" id="kepekId">
             <h2>Képek</h2>
-            <div class="tesztRow">
+            <div class="row">
                 <img src="img/z7.png" title="Dani">
                 <img src="img/mt03.png" title="Patrik">
             </div>
-            <div class="tesztRow">
+            <div class="row">
                 <img src="img/fz6.png" title="Korci">
                 <img src="img/cb650r.png" title="Milán">
             </div>
-            <div class="tesztRow">
+            <div class="row">
                 <img src="img/ninja250.png" title="Józsi">
                 <img src="img/xt660.png" title="Nándi">
             </div>
-            <div class="tesztRow">
+            <div class="row">
                 <img src="img/gsxf750.png" title="Beni">
                 <img src="img/pegaso650.png" title="Jó lenne">
             </div>
@@ -82,4 +82,11 @@
     }
     window.addEventListener('load', updateHeading);
     window.addEventListener('resize', updateHeading);
+
+    function katt(id){
+        if(id == 'ver') {
+            document.getElementById("versenyId").style = "animation: none"
+            document.getElementById("versenyId").style = "animation: jelol 1s"
+        }
+    }
 </script>
