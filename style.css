@@ -1,0 +1,48 @@
+html { font-family: Radio Canada Big; }
+body { background-color: antiquewhite; }
+
+
+
+
+
+
+.nagy {
+    display: flex;
+    width: 95%;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.kicsik{
+    width: 31%;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+.kicsik img{
+   max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.hir{
+   margin-bottom: 10px;
+    height: 400px;
+}
+.tesztRow{
+    display: flex;
+}
+.tesztRow img{
+    object-fit: contain;
+    width: 50%;
+}
+span { font-size: 15px; }
+h2 {
+    margin: 5px;
+}
+
+@media (max-width: 700px) {
+    body { background-color: red; }
+    .nagy { text-align: center; }
+    h2 { text-align: left; }
+    .row img { width: 200px; }
+}
